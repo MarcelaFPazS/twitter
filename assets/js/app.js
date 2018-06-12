@@ -1,5 +1,6 @@
 const boton = document.getElementById('btn');
 boton.addEventListener('click' ,() =>{
+  
   // acá  guardo el comentario ingresado por el usuario
   let comments = document.getElementById('comment').value;
 
@@ -21,6 +22,17 @@ const contenedorElemento =  document.createElement('p')
   newComments.appendChild(contenedorElemento);
 
   cont.appendChild(newComments) ;
+})
 
+  function contar() {
+    const max = "140";
+    let cadena = document.getElementById("comment").value;
+    let longitud = cadena.length;
+   
+      if(longitud <= max) {
+           document.getElementById("contador").value = max-longitud;
+      } else {
+           document.getElementById("textArea").value = cadena.substr(0, max);
+      }
+   }
 
-  })

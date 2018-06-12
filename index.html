@@ -27,9 +27,12 @@
 	<section class="center">
 		<div class="container">
 			<div class="row">
-				<div class="col-12">
-					<textarea class="txt" id="comment" placeholder="Añade un comentario..."></textarea>
-				</div>
+          <div class="col-12">
+              <textarea class="txt" onKeyDown="contar()" onKeyUp="contar()" maxlength="140" id="comment" placeholder="Añade un comentario..."></textarea>
+              </br>
+              <label>Caracteres restantes:</label> 
+              <input disabled size="3" value="140" id="contador"> 
+          </div>
 			</div>
 			<div class="row">
 				<div class="col-12">
