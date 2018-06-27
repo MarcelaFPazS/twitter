@@ -16,6 +16,7 @@ const newComments = document.createElement('div');
 //nodos de texto del textarea
 let textNewComment =  document.createTextNode(comments);// sin comilla porque es variable de js que llamamos
 
+
 const contenedorElemento =  document.createElement('p')
   contenedorElemento.appendChild(textNewComment);// padre de p, hijo de html
   
@@ -35,4 +36,12 @@ const contenedorElemento =  document.createElement('p')
            document.getElementById("textArea").value = cadena.substr(0, max);
       }
    }
-
+   function bloquear(){
+      let textNewComment =  document.createTextNode(comments);
+     
+   }
+   if(textNewComment.length === 0 || textNewComment === null){
+    boton.disabled = true;
+    }
+    else {boton.disabled = false;
+    }
